@@ -1,0 +1,148 @@
+@import'./variables.styl';
+
+.page-main
+  .page-content
+    display flex
+    justify-content space-between
+    .images
+      height 100%
+      width 50%
+      display flex
+      justify-content space-between
+      padding 45px 50px 45px 0
+      &__little
+        margin 0 5px
+        width 120px
+        padding-right 20px
+        > img
+          width 120px
+          padding-bottom 12px
+      &__big
+        > img
+          max-width 100%
+    .info
+      padding 45px 50px 45px 60px
+      width 50%
+      display flex
+      flex-direction column
+      justify-content space-between
+      &__title
+        text-align center
+        > span
+          color $blue
+          > a
+            color $blue
+          &:hover
+            > a
+              color darken($blue, 40%)
+        > h2
+          font-family PT_Sans-Narrow-Web-Bold
+          font-size 1.7rem
+          padding-top 7px
+          color darken($gray, 40%)
+      &__price
+        text-align center
+        font-size .9rem
+        color darken($gray, 40%)
+      &__description
+        text-align center
+        > h3
+          font-family PT_Sans-Narrow-Web-Bold
+          padding-top 7px
+          color darken($gray, 40%)
+          border-bottom 1px solid lightness($gray, 80%)
+          font-size 1.1rem
+          padding-bottom 5px
+          margin-bottom 20px
+        > p
+          padding 0 10px
+          font-size .8rem
+          color $gray
+      &__properties
+        > h3
+          font-family PT_Sans-Narrow-Web-Bold
+          font-size 1rem
+          color darken($gray, 40%)
+          border-bottom 1px solid lightness($gray, 80%)
+          padding 5px 0
+          width 145px
+        &_blue,
+        &_brown
+          display flex
+          align-items center
+          margin 5px -23px
+          padding 5px
+          cursor pointer
+          .text
+            > h3
+              font-size .8rem
+              color $gray
+          .circle
+            border none
+            padding 5px
+            border-radius 50%
+          .color
+            margin 0 7px
+            padding 5px
+            border none
+        &_blue
+          .circle
+            border 1px solid $gray
+          .color
+            background-color $blue
+        &_brown
+          .fa
+            border none
+            border-radius 50%
+            background-color $darkBlue
+            padding 2px
+            color $white
+            font-size .5rem
+          .color
+            background-color $darkBlue
+      &__btn
+        border none
+        border-radius 2px
+        padding 13px 0
+        background-color $brown
+        font-size 1rem
+        color $white
+        cursor pointer
+        &:hover
+          background-color darken($brown, 40%)
+
+@media screen and (max-width: $tablets)
+  .page-main
+    .page-content
+      .images
+        flex-direction column
+        width 40%
+        align-items center
+        padding 45px 0
+        &__little
+          padding 0
+        &__big
+          > img
+            width 120px
+      .info
+        width 60%
+
+@media screen and (max-width: $mobile)
+  .page-main
+    .page-content
+      flex-direction column-reverse
+      .images
+        border-bottom 1px solid lightness($gray, 80%)
+        box-sizing border-box
+        align-items center
+        width 100%
+        padding 0 10px 40px
+        &__little
+          display none
+        &__big
+          > img
+            max-width 100%
+            width 400px
+      .info
+        box-sizing border-box
+        width 100%

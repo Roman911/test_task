@@ -1,0 +1,87 @@
+@import'./variables.styl';
+
+.navbar
+  display flex
+  height 100%
+  justify-content space-between
+  align-items center
+  //position relative
+  &__control
+    display none
+    &-btn
+      width 20px
+      height 3px
+      margin-top 4px
+      background-color darken($gray, 40%)
+  &__list
+    height 100%
+    &-menu
+      box-sizing border-box
+      display flex
+      height 100%
+
+    &-item
+      font-family PT_Sans-Narrow-Web-Bold
+      color $gray
+      font-size 1rem
+      display flex
+      align-items center
+      padding 0 25px
+      cursor pointer
+      &:hover
+        background-color alpha($gray, .1)
+
+  &__cart
+    border-right 1px solid lightness($gray, 80%)
+    padding-right 10px
+    height 100%
+    display flex
+    align-items center
+    cursor pointer
+    &:hover
+      background-color alpha($gray, .1)
+    &_bag
+      padding 10px
+      font-family PT_Sans-Narrow-Web-Bold
+      color $darkBlue
+    &_number
+      background-color $darkBlue
+      border none
+      border-radius 50%
+      color $white
+      font-size .7rem
+      padding 0 5px 3px
+
+.navbar__list-item.active
+  color darken($gray, 40%)
+
+@media screen and (max-width: $mobile)
+  .navbar
+
+    &__control
+      display block
+    &__list
+      overflow: hidden
+      position absolute
+      width 100vw
+      height 150px
+      top 70px
+      left 0
+      &-menu
+        box-sizing border-box
+        position absolute
+        height 130px
+        width 100vw
+        flex-direction column
+        top 2px
+        left 0
+        background-color $white
+        z-index 2
+        box-shadow 0 6px 9px $gray
+        transform translateY(-100%)
+        transition transform 0.5s
+      &-item
+        padding 5px 10px
+
+  .navbar__list-menu.showed
+    transform translateY(0)

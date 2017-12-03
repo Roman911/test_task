@@ -1,0 +1,48 @@
+@import'./variables.styl';
+
+.page-header
+  box-sizing border-box
+  display flex
+  justify-content space-around
+  align-items center
+  height 70px
+  background-color $white
+  box-shadow 0 0 15px $gray
+  position relative
+
+.logo
+
+  flex-grow 2
+  text-align center
+  padding 0 10px
+
+.page-navbar
+  box-sizing border-box
+  height 100%
+  flex-grow 19
+
+.form
+
+  flex-grow 3
+  display flex
+  justify-content space-around
+  align-items center
+  font-family PT_Sans-Narrow-Web-Bold
+  color $gray
+  &__log,
+  &__sign
+    padding 0 10px
+    > a
+      color $gray
+    &:hover
+      > a
+        color $darkBlue
+  &__line
+    border-right 2px solid $black
+    height 20px
+
+@media screen and (max-width: $mobile)
+  .page-navbar
+    flex-grow 4
+  .form
+    flex-grow 1

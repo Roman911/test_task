@@ -1,0 +1,76 @@
+@import'./variables.styl';
+
+.page-footer
+  margin-top 40px
+  .header
+    text-align center
+    > p
+      font-size 1rem
+      color $gray
+    > h3
+      font-family PT_Sans-Narrow-Web-Bold
+      font-size 1rem
+      color darken($gray, 40%)
+  .main
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    margin 20px 0 30px
+    .product
+      margin 5px
+      cursor pointer
+      &:hover
+        box-shadow 0 0 15px $gray
+        transform scale(1.05)
+        transition .5s
+      &__img
+        width 220px
+        height 220px
+      &:nth-child(1)
+        .product__img
+          background url('./../assets/image/product_1.jpg'), $bgProduct
+          background-position center
+          background-repeat no-repeat
+      &:nth-child(2)
+        .product__img
+          background url('./../assets/image/product_2.jpg'), $bgProduct
+          background-position center
+          background-repeat no-repeat
+      &:nth-child(3)
+        .product__img
+          background url('./../assets/image/product_3.jpg'), $bgProduct
+          background-position center
+          background-repeat no-repeat
+      &:nth-child(4)
+        .product__img
+          background url('./../assets/image/product_4.jpg'), $bgProduct
+          background-position center
+          background-repeat no-repeat
+      &:nth-child(5)
+        .product__img
+          background url('./../assets/image/product_5.jpg'), $bgProduct
+          background-position center
+          background-repeat no-repeat
+      &__properties
+        display flex
+        justify-content space-between
+        margin-top 10px
+        padding 0 5px 5px
+        &_name
+          > h3
+            font-family PT_Sans-Narrow-Web-Bold
+            font-size 1rem
+            color darken($gray, 40%)
+          > p
+            font-size .8rem
+            color $gray
+        &_price
+          font-size .9rem
+          color $gray
+
+@media screen and (max-width: $laptops)
+  .page-footer
+    .main
+      display flex
+      justify-content center
+      flex-wrap wrap

@@ -1,0 +1,36 @@
+$baseFontSize=16px;
+
+$pageContentMaxWidth=1212px;
+$xsMobile = 575px;
+$mobile = 768px;
+$tablets = 992px;
+$laptops = 1200px;
+html
+  font-size $baseFontSize
+  font-family Georgia
+  min-height 100vh
+
+body
+  padding 0
+  margin 0
+  min-height 100vh
+
+h1,h2,h3,h4,p,ul
+  margin 0
+  padding 0
+
+li
+  list-style none
+
+a
+  text-decoration none
+
+.page-wrapper
+  box-sizing border-box
+  min-height 100vh
+
+.page-content
+  max-width $pageContentMaxWidth
+  margin 0 auto
+  box-sizing border-box
+  height 100%
