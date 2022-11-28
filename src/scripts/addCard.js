@@ -38,7 +38,7 @@ const cardItemHTML = (json) => {
 };
 
 //Додаємо карточку
-const addCard = (json) => {
+export const addCard = (json) => {
   gridWrapper.insertAdjacentHTML("beforeend", cardItemHTML(json));
   const card = document.querySelector(`[data-id="${json.id}"]`);
   setTimeout(() => {

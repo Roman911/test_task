@@ -1,6 +1,7 @@
 import './addCard';
 import "./modal";
 import './removeCard';
+import './sessionStorage';
 import "./svipe";
 
 //Глобальні зміні
