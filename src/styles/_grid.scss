@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  @media only screen and (max-width: 420px) {
+    overflow: hidden;
+  }
+  .grid {
+    margin-top: 90px;
+    margin-bottom: 70px;
+    @media only screen and (min-width: 420px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap:  15px;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 920px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 680px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 420px) {
+      width: 9999px;
+      padding: 0;
+      list-style: none;
+      transition: margin-left 250ms;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+$animation: 1.5s ease-in-out 0.5s infinite normal none running pulsation;
+$bg: rgba(0, 0, 0, 0.11);
+
+@keyframes pulsation {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.grid {
+  .card {
+    height: 345px;
+    max-width: 380px;
+    transition: 500ms;
+    opacity: 1;
+    @media only screen and (max-width: 420px) {
+      width: 380;
+      margin: 20px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+    &__img {
+      background-image: url("/src/images/47ebd611dbd9a64824a701b2fb601dca.jpg");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 180px;
+    }
+    &__title {
+      height: 22px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      height: 54px;
+    }
+    
+    &__body {
+      padding: 10px 20px 20px;
+      p {
+        min-height: 54px;
+      }
+      .btn {
+        margin-left: auto;
+        margin-top: 20px;
+        display: block;
+      }
+    }
+    &.loading {
+      .card {
+        &__img {
+          animation: $animation;
+          background: $bg;
+        }
+        &__title {
+          animation: $animation;
+          background: $bg;
+          border-radius: 6px;
+          h3 {
+            display: none;
+          }
+        }
+        &__text {
+          animation: $animation;
+          background: $bg;
+          border-radius: 6px;
+          p {
+            display: none;
+          }
+        }
+        &__body {
+          .btn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.opacityNull {
+  opacity: 0;
+}
